@@ -6,6 +6,7 @@
 const bodyParser = require('body-parser')
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
+const fetch = require('node-fetch')
 const path = require('path')
 const port = process.env.PORT || 3000
 const app = express()
@@ -21,6 +22,7 @@ app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
+
 app.get('/', (req, res) => {
   res.render('index')
 })
@@ -28,6 +30,8 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
   res.render('login')
 })
+
+require('./routes/film')(app, fetch)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`)
