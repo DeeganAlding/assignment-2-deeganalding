@@ -1,0 +1,17 @@
+<% data.forEach(item => { %>
+
+
+    <div class="item">
+        <img id="camera-pic" src="<%= item.image %>">
+        <div class="info">
+            <p id="name"><%= item.name %></p>
+            <p id="type">Camera Type: <%= item.type %></p>
+            <p id="price">Price: $<%= item.price %></p>
+            <br>
+        </div>
+    <div class="rateYo"></div>
+    </div>
+    
+    
+    
+    <% }) %>

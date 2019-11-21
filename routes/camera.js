@@ -1,9 +1,9 @@
 module.exports = (app, fetch) => {
-    app.get('/film', (req, res) => {
-        fetch('https://gist.githubusercontent.com/DeeganAlding/33fee857c822937cce254452159ddb15/raw/be389fe3d452d03f668d7ab5f5b111df68bdc6f5/data.json')
+    app.get('/camera', (req, res) => {
+        fetch('https://gist.githubusercontent.com/DeeganAlding/62b6a1145abc4db6c0e62abda0d94e83/raw/99f88e8d6cf406517aef39a03fcffd4268558cbd/Camera%2520JSON')
             .then(res => res.json())
             .then(data => {
-                res.render('film', {
+                res.render('camera', {
                     data: data,
                 })
             })

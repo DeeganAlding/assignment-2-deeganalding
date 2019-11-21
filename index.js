@@ -23,15 +23,23 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
 
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
   res.render('index')
 })
 
-app.get('/login', (req, res) => {
-  res.render('login')
+require('./routes/film')(app, fetch)
+require('./routes/camera')(app, fetch)
+require('./routes/login')(app, fetch)
+
+
+app.get('/contact', (req, res) => {
+  res.render('contact')
 })
 
-require('./routes/film')(app, fetch)
+app.use(function(req, res) {
+  res.status(404)
+  res.render('404')
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`)
