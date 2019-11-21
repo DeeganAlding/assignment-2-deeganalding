@@ -32,6 +32,10 @@ require('./routes/camera')(app, fetch)
 require('./routes/login')(app, fetch)
 
 
+app.get('/comment', (req, res) => {
+  res.render('comment')
+})
+
 app.get('/contact', (req, res) => {
   res.render('contact')
 })
