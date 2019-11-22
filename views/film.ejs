@@ -10,9 +10,32 @@
         <p id="price">Price: $<%= item.price %></p>
         <br>
     </div>
-<div class="rateYo"></div>
+    <div class="rateYo"></div>
 </div>
 
-
-
 <% }) %>
+
+<br>
+
+<div class="comment-box">
+    <h3 id="get-in-touch">Comment Form</h3>
+    
+    <form id="comments">
+
+        <p>Name:</p>
+        <input type="text" name="Name" required id="comment-name" class="input-item-form"
+            placeholder="Your First and Last name">
+        <br>
+        <br>
+        <p>Comment:</p>
+        <textarea name="message" required id="comment-message" cols="50" rows="10" class="input-item-form"
+            placeholder="Please enter your comment here"></textarea>
+        <br>
+        <br>
+        <button type="submit" class="comment-submit-btn" id="comment-submit-btn">Submit</button>
+    </form>
+</div>
+
+<div id="comment-output">
+    <p id="comment-data"></p>
+</div>

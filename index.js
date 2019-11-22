@@ -1,8 +1,3 @@
-/**
- * @version 0.5.0
- * @author [Grayson Orr](https://github.com/grayson-orr)
- */
-
 const bodyParser = require('body-parser')
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
@@ -23,7 +18,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
 
-app.get('/home', (req, res) => {
+app.get('/index', (req, res) => {
   res.render('index')
 })
 

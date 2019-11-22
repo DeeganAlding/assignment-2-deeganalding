@@ -1,9 +1,14 @@
-<form class="form" method="POST" action="/">
-  <label>Username :</label>
-  <input type="text" name="username" id="email">
-  <label>Password :</label>
-  <input type="password" name="password" id="password">
-  <button type="submit" id="login" value="Login">Submit</button>
+<form class="contact-section" method="POST" action="/">
+  <fieldset>
+    <h1>Login</h1>
+    <label>Username :</label>
+    <input type="text" name="username" id="email">
+    <br>
+    <label>Password :</label>
+    <input type="password" name="password" id="password">
+    <button type="submit" id="login" value="Login">Submit</button>
+    <br>
+    <%- message %>
+  </fieldset>
 </form>
 
-<%- message %>
